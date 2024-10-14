@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <title>Expression Validator</title>
+  <meta name="viewport" content="width=device-width" />
+   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/foundation/foundation.min.css">
+</head>
+
+<body>
+
+  
+
+  <!-- Title and subtitle -->
+  <div class="row">
+    <div class="twelve columns">
+       <h3 class="subheader"><strong>Expression Validator</strong></h3>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="row">
+    <div class="six columns">
+      <div class="editor" id="editor"></div>
+
+<pre id="init" spellcheck="false" style="display: none">
+IF(CONDITION,TRUE,FALSE)
+</pre>
+
+    <div id="info" class="alert-box success">No result yet.</div>
+    </div>
+
+    <div class="three columns">
+      		<Div>
+      			<div class="panel">
+			        <p><b>Attributes</b></p>
+			        <p>  <a id="var1" href="#" onclick="Demo.addVariableToEditor('Loan_Amount');" >Loan Amount</a> </p>
+			        <p>  <a id="var1" href="#" onclick="Demo.addVariableToEditor('Interest_Rate');" >Interest Rate</a> </p>
+			        <p>  <a id="var1" href="#" onclick="Demo.addVariableToEditor('Loan_Tenure');" >Loan Tenure </a></p>
+			 
+			      </div>
+      		</DIV>
+      </div>
+ 
+  
+  <div class="three columns">
+      		<Div>
+      			<div class="panel">
+			        <p><b>Operations</b></p>
+			        <p>  <a id="var1" href="#" onclick="Demo.addVariableToEditor('+');" >+ </a> </p>
+			        <p>  <a id="var1" href="#" onclick="Demo.addVariableToEditor('-');" >- </a> </p>
+			        <p>  <a id="var1" href="#" onclick="Demo.addVariableToEditor('*');" >* </a></p>
+			        <p> <a id="var1" href="#" onclick="Demo.addVariableToEditor('/');" >/</a> </p>
+			        <p> <a id="var1" href="#" onclick="Demo.addVariableToEditor('IF(CONDITION,TRUE,FALSE)');" >IF </a> </p>
+			        <p> <a id="var1" href="#" onclick="Demo.addVariableToEditor('SUM(VARS)');" >SUM </a> </p>
+			        <p> <a id="var1" href="#" onclick="Demo.addVariableToEditor('AVG(VARS)');" >AVG </a> </p>
+			        <p> <a id="var1" href="#" onclick="Demo.addVariableToEditor('MIN(VARS)');" >MIN </a> </p>
+			        <p> <a id="var1" href="#" onclick="Demo.addVariableToEditor('MAX(VARS)');" >MAX </a> </p>
+			        <p> <a id="var1" href="#" onclick="Demo.addVariableToEditor('COUNT(VARS)');" >COUNT </a> </p>
+			      </div>
+      		</DIV>
+      </div>
+  </div>
+ </div>
+ 
+
+<script src="esprima.js"></script>
+<script src="assets/monaco/min/vs/loader.js"></script>
+<script src="components.js"></script>
+<script>Demo.validator();</script>
+</body>
+</html>
